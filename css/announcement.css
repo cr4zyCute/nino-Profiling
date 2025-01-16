@@ -1,0 +1,172 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Sidebar Styles (Announcements on the left) */
+.Announcements {
+    width: 30%;
+    /* Adjust the width as needed */
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px;
+    height: calc(100vh - 40px);
+    /* Full height minus margin */
+    overflow-y: auto;
+    /* Enable scrolling for long lists */
+}
+
+.Announcements h2 {
+    font-size: 24px;
+    color: #224abe;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.announcement {
+    background: #f7f7f7;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #224abe;
+    margin-bottom: 15px;
+}
+
+.announcement p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    color: #333;
+}
+
+.announcement small {
+    color: #666;
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.announcement .delete-form button {
+    background: #e74a3b;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.announcement .delete-form button:hover {
+    background: #c0392b;
+}
+
+/* Main Content (Create Announcement) */
+.create-announcement {
+    width: 70%;
+    padding: 30px;
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-announcement h1 {
+    font-size: 28px;
+    color: #224abe;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.create-announcement form {
+    background: #f7f9fc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+.create-announcement form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+.create-announcement form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+    resize: none;
+}
+
+.create-announcement form button {
+    background: #224abe;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.create-announcement form button:hover {
+    background: #4e73df;
+}
+
+/* Back Button */
+.back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, #7a5b9b, #2575fc);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.back:hover {
+    background: linear-gradient(135deg, #4b4b4b, #1e60cf);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(34, 74, 190, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .Announcements {
+        width: 100%;
+        height: auto;
+    }
+
+    .create-announcement {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
